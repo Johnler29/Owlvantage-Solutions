@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Calendar, Users, Award, Network } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 
 /**
  * Seminars Page
@@ -71,32 +72,39 @@ export default function Seminars() {
     <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-[#25badf]/5 to-[#1b2e45]/5">
+      <main className="animate-in fade-in-20 slide-in-from-bottom-4 duration-500">
+        {/* Hero Section */}
+        <section className="py-20 md:py-32 bg-gradient-to-br from-[#25badf]/5 to-[#1b2e45]/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
+          <ScrollReveal as="div" variant="pop" className="max-w-3xl">
             <h1 className="heading-xl mb-6">Seminars & Workshops</h1>
             <p className="text-xl text-gray-700 leading-relaxed">
               Discover our comprehensive range of seminars and workshops designed to develop skills, enhance leadership,
               and drive organizational success.
             </p>
-          </div>
+          </ScrollReveal>
         </div>
-      </section>
+        </section>
 
-      {/* Featured Programs */}
-      <section className="py-20 md:py-32 bg-white">
+        {/* Featured Programs */}
+        <section className="py-20 md:py-32 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <ScrollReveal as="div" variant="fade-up" className="text-center mb-16">
             <h2 className="heading-lg mb-4">Featured Programs</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Our most popular seminars and training programs designed for professional development.
             </p>
-          </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {featuredPrograms.map((program, idx) => (
-              <div key={idx} className="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200">
+              <ScrollReveal
+                key={idx}
+                as="div"
+                variant="pop"
+                delay={idx * 80}
+                className="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200"
+              >
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="heading-sm text-[#1b2e45] flex-1">{program.title}</h3>
                 </div>
@@ -109,25 +117,31 @@ export default function Seminars() {
                     {program.level}
                   </span>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* Upcoming Seminars */}
-      <section className="py-20 md:py-32 bg-gray-50">
+        {/* Upcoming Seminars */}
+        <section className="py-20 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <ScrollReveal as="div" variant="fade-up" className="text-center mb-16">
             <h2 className="heading-lg mb-4">Upcoming Seminars</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Register for our upcoming seminars and start your learning journey today.
             </p>
-          </div>
+          </ScrollReveal>
 
           <div className="space-y-6">
             {upcomingSeminars.map((seminar, idx) => (
-              <div key={idx} className="card-hover bg-white p-8 rounded-lg border border-gray-200">
+              <ScrollReveal
+                key={idx}
+                as="div"
+                variant="pop"
+                delay={idx * 70}
+                className="card-hover bg-white p-8 rounded-lg border border-gray-200"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
                   <div>
                     <div className="text-[#25badf] font-bold text-lg">{seminar.date}</div>
@@ -146,41 +160,47 @@ export default function Seminars() {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* Benefits */}
-      <section className="py-20 md:py-32 bg-white">
+        {/* Benefits */}
+        <section className="py-20 md:py-32 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <ScrollReveal as="div" variant="fade-up" className="text-center mb-16">
             <h2 className="heading-lg mb-4">Benefits of Attending</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Discover what our participants gain from our seminars and workshops.
             </p>
-          </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, idx) => {
               const Icon = benefit.icon;
               return (
-                <div key={idx} className="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200">
+                <ScrollReveal
+                  key={idx}
+                  as="div"
+                  variant="pop"
+                  delay={idx * 80}
+                  className="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200"
+                >
                   <div className="flex items-start gap-4">
                     <Icon className="w-10 h-10 text-[#25badf] flex-shrink-0 mt-1" />
                     <p className="text-lg text-gray-700 font-medium">{benefit.text}</p>
                   </div>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* Promotional Banner */}
-      <section className="py-20 md:py-32 bg-[#1b2e45] text-white">
-        <div className="container mx-auto px-4 text-center">
+        {/* Promotional Banner */}
+        <section className="py-20 md:py-32 bg-[#1b2e45] text-white">
+        <ScrollReveal as="div" variant="pop" className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Enhance Your Skills?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join hundreds of professionals who have transformed their careers through our seminars and workshops.
@@ -190,8 +210,9 @@ export default function Seminars() {
               Book a Seminar
             </span>
           </Link>
-        </div>
-      </section>
+        </ScrollReveal>
+        </section>
+      </main>
 
       <Footer />
     </div>

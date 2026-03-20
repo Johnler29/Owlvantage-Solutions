@@ -3,6 +3,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { toast } from "sonner";
+import ScrollReveal from "@/components/ScrollReveal";
 
 /**
  * Contact Page
@@ -64,27 +65,28 @@ export default function Contact() {
     <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-[#25badf]/5 to-[#1b2e45]/5">
+      <main className="animate-in fade-in-20 slide-in-from-bottom-4 duration-500">
+        {/* Hero Section */}
+        <section className="py-20 md:py-32 bg-gradient-to-br from-[#25badf]/5 to-[#1b2e45]/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
+          <ScrollReveal as="div" variant="pop" className="max-w-3xl">
             <h1 className="heading-xl mb-6">Get in Touch</h1>
             <p className="text-xl text-gray-700 leading-relaxed">
               Have questions or ready to discuss your learning and development needs? We'd love to hear from you.
             </p>
-          </div>
+          </ScrollReveal>
         </div>
-      </section>
+        </section>
 
-      {/* Contact Section */}
-      <section className="py-20 md:py-32 bg-white">
+        {/* Contact Section */}
+        <section className="py-20 md:py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Information */}
             <div className="lg:col-span-1">
               <div className="space-y-8">
                 {/* Email */}
-                <div className="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200">
+                <ScrollReveal as="div" variant="pop" className="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200">
                   <div className="flex items-start gap-4">
                     <Mail className="w-8 h-8 text-[#25badf] flex-shrink-0 mt-1" />
                     <div>
@@ -97,10 +99,15 @@ export default function Contact() {
                       </a>
                     </div>
                   </div>
-                </div>
+                </ScrollReveal>
 
                 {/* Phone */}
-                <div className="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200">
+                <ScrollReveal
+                  as="div"
+                  variant="pop"
+                  delay={80}
+                  className="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200"
+                >
                   <div className="flex items-start gap-4">
                     <Phone className="w-8 h-8 text-[#25badf] flex-shrink-0 mt-1" />
                     <div>
@@ -109,10 +116,15 @@ export default function Contact() {
                       <p className="text-gray-600 text-sm mt-2">Contact us for phone number</p>
                     </div>
                   </div>
-                </div>
+                </ScrollReveal>
 
                 {/* Location */}
-                <div className="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200">
+                <ScrollReveal
+                  as="div"
+                  variant="pop"
+                  delay={160}
+                  className="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200"
+                >
                   <div className="flex items-start gap-4">
                     <MapPin className="w-8 h-8 text-[#25badf] flex-shrink-0 mt-1" />
                     <div>
@@ -121,10 +133,15 @@ export default function Contact() {
                       <p className="text-gray-600 text-sm mt-2">Virtual and in-person options available</p>
                     </div>
                   </div>
-                </div>
+                </ScrollReveal>
 
                 {/* Social Media */}
-                <div className="bg-[#25badf]/10 p-8 rounded-lg border border-[#25badf]/20">
+                <ScrollReveal
+                  as="div"
+                  variant="fade-up"
+                  delay={220}
+                  className="bg-[#25badf]/10 p-8 rounded-lg border border-[#25badf]/20"
+                >
                   <h3 className="font-bold text-[#1b2e45] mb-4">Connect With Us</h3>
                   <div className="space-y-3">
                     <a
@@ -149,13 +166,14 @@ export default function Contact() {
                       Twitter/X
                     </a>
                   </div>
-                </div>
+                </ScrollReveal>
               </div>
             </div>
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <ScrollReveal as="div" variant="fade-up">
+                <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Name */}
                   <div>
@@ -255,21 +273,23 @@ export default function Contact() {
                 <p className="text-sm text-gray-600 text-center">
                   We'll get back to you as soon as possible. Thank you for reaching out!
                 </p>
-              </form>
+                </form>
+              </ScrollReveal>
             </div>
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 md:py-32 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
+        {/* CTA Section */}
+        <section className="py-20 md:py-32 bg-gray-50">
+        <ScrollReveal as="div" variant="pop" className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1b2e45] mb-6">Prefer to Call?</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Our team is ready to discuss your learning and development needs. Reach out via email or contact form above.
           </p>
-        </div>
-      </section>
+        </ScrollReveal>
+        </section>
+      </main>
 
       <Footer />
     </div>

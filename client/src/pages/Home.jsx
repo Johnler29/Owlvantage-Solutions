@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { ArrowRight, BookOpen, Zap, Users } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 
 /**
  * Home Page
@@ -72,7 +73,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-white/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
+            <ScrollReveal as="div" variant="pop">
               <h1 className="heading-xl mb-4">Empowering Learning Through Technology</h1>
               <p className="text-xl text-gray-700 mb-2 font-semibold text-[#25badf]">See Smarter</p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -91,7 +92,7 @@ export default function Home() {
                   </span>
                 </Link>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -99,20 +100,26 @@ export default function Home() {
       {/* Services Overview */}
       <section className="py-20 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <ScrollReveal as="div" variant="fade-up" className="text-center mb-16">
             <h2 className="heading-lg mb-4">Our Services</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We offer comprehensive solutions across learning, technology, and professional development.
             </p>
-          </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, idx) => (
-              <div key={idx} className="card-hover bg-white p-8 rounded-lg border border-gray-200">
+              <ScrollReveal
+                key={idx}
+                as="div"
+                variant="pop"
+                delay={idx * 80}
+                className="card-hover bg-white p-8 rounded-lg border border-gray-200"
+              >
                 <img src={service.icon} alt={service.title} className="w-20 h-20 mb-6" />
                 <h3 className="heading-sm mb-3">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{service.description}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -122,23 +129,23 @@ export default function Home() {
       <section className="py-20 md:py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
+            <ScrollReveal as="div" variant="fade-up">
               <h2 className="heading-lg mb-8">Why Choose Owlvantage</h2>
               <div className="space-y-6">
                 {whyChoose.map((item, idx) => {
                   const Icon = item.icon;
                   return (
-                    <div key={idx} className="flex gap-4 items-start">
+                    <ScrollReveal key={idx} as="div" variant="fade-up" delay={idx * 70} className="flex gap-4 items-start">
                       <div className="flex-shrink-0 mt-1">
                         <Icon className="w-6 h-6 text-[#25badf]" />
                       </div>
                       <p className="text-lg text-gray-700 font-medium">{item.text}</p>
-                    </div>
+                    </ScrollReveal>
                   );
                 })}
               </div>
-            </div>
-            <div className="bg-white p-8 rounded-lg border border-gray-200 card-hover">
+            </ScrollReveal>
+            <ScrollReveal as="div" variant="pop" className="bg-white p-8 rounded-lg border border-gray-200 card-hover">
               <div className="flex flex-col lg:flex-row lg:items-center gap-8">
                 <div className="text-center lg:text-left">
                   <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#25badf] leading-none">15+</div>
@@ -156,7 +163,7 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -164,38 +171,44 @@ export default function Home() {
       {/* Featured Seminars */}
       <section className="py-20 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <ScrollReveal as="div" variant="fade-up" className="text-center mb-16">
             <h2 className="heading-lg mb-4">Featured Programs</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Explore our most popular seminars and training programs.
             </p>
-          </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {seminars.map((seminar, idx) => (
-              <div key={idx} className="card-hover bg-white p-8 rounded-lg border border-gray-200">
+              <ScrollReveal
+                key={idx}
+                as="div"
+                variant="pop"
+                delay={idx * 80}
+                className="card-hover bg-white p-8 rounded-lg border border-gray-200"
+              >
                 <h3 className="heading-sm mb-3 text-[#1b2e45]">{seminar.title}</h3>
                 <p className="text-gray-600 mb-6">{seminar.description}</p>
                 <span className="text-[#25badf] font-semibold hover:underline inline-flex items-center gap-2">
                   Learn More <ArrowRight size={18} />
                 </span>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
 
-          <div className="text-center">
+          <ScrollReveal as="div" variant="fade-up" className="text-center">
             <Link href="/seminars">
               <span className="btn-primary inline-flex items-center gap-2">
                 View All Programs <ArrowRight size={18} />
               </span>
             </Link>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 md:py-32 bg-[#1b2e45] text-white">
-        <div className="container mx-auto px-4 text-center">
+        <ScrollReveal as="div" variant="pop" className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Organization?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Let's discuss how Owlvantage Solutions can help your team achieve its goals through innovative learning and
@@ -206,7 +219,7 @@ export default function Home() {
               Request a Consultation <ArrowRight size={18} />
             </span>
           </Link>
-        </div>
+        </ScrollReveal>
       </section>
 
       <Footer />

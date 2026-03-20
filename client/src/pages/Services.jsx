@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { BookOpen, Code, Users, BarChart3, Zap, Shield } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 
 /**
  * Services Page
@@ -84,114 +85,139 @@ export default function Services() {
     <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-[#25badf]/5 to-[#1b2e45]/5">
+      <main className="animate-in fade-in-20 slide-in-from-bottom-4 duration-500">
+        {/* Hero Section */}
+        <section className="py-20 md:py-32 bg-gradient-to-br from-[#25badf]/5 to-[#1b2e45]/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
+          <ScrollReveal as="div" variant="pop" className="max-w-3xl">
             <h1 className="heading-xl mb-6">Our Services</h1>
             <p className="text-xl text-gray-700 leading-relaxed">
               Comprehensive solutions across learning, technology, and professional development designed to drive
               organizational success.
             </p>
-          </div>
+          </ScrollReveal>
         </div>
-      </section>
+        </section>
 
-      {/* Learning Solutions */}
-      <section className="py-20 md:py-32 bg-white">
+        {/* Learning Solutions */}
+        <section className="py-20 md:py-32 bg-white">
         <div className="container mx-auto px-4">
-          <div className="mb-12">
+          <ScrollReveal as="div" variant="fade-up" className="mb-12">
             <h2 className="heading-lg mb-4 text-[#1b2e45]">Learning Solutions</h2>
             <p className="text-lg text-gray-600 mb-8">
               Comprehensive training programs designed to build skills and drive organizational performance.
             </p>
-          </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {learningServices.map((service, idx) => {
               const Icon = service.icon;
               return (
-                <div key={idx} className="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200">
+                <ScrollReveal
+                  key={idx}
+                  as="div"
+                  variant="pop"
+                  delay={idx * 80}
+                  className="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200"
+                >
                   <Icon className="w-12 h-12 text-[#25badf] mb-4" />
                   <h3 className="heading-sm mb-3 text-[#1b2e45]">{service.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{service.description}</p>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* Workshops & Seminars */}
-      <section className="py-20 md:py-32 bg-gray-50">
+        {/* Workshops & Seminars */}
+        <section className="py-20 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="mb-12">
+          <ScrollReveal as="div" variant="fade-up" className="mb-12">
             <h2 className="heading-lg mb-4 text-[#1b2e45]">Workshops & Seminars</h2>
             <p className="text-lg text-gray-600 mb-8">
               Interactive sessions and seminars focused on practical skill development and leadership excellence.
             </p>
-          </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {workshopServices.map((service, idx) => {
               const Icon = service.icon;
               return (
-                <div key={idx} className="card-hover bg-white p-8 rounded-lg border border-gray-200">
+                <ScrollReveal
+                  key={idx}
+                  as="div"
+                  variant="pop"
+                  delay={idx * 80}
+                  className="card-hover bg-white p-8 rounded-lg border border-gray-200"
+                >
                   <Icon className="w-12 h-12 text-[#25badf] mb-4" />
                   <h3 className="heading-sm mb-3 text-[#1b2e45]">{service.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{service.description}</p>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* IT Services */}
-      <section className="py-20 md:py-32 bg-white">
+        {/* IT Services */}
+        <section className="py-20 md:py-32 bg-white">
         <div className="container mx-auto px-4">
-          <div className="mb-12">
+          <ScrollReveal as="div" variant="fade-up" className="mb-12">
             <h2 className="heading-lg mb-4 text-[#1b2e45]">IT Services</h2>
             <p className="text-lg text-gray-600 mb-8">
               Technology solutions and consulting services to modernize your learning infrastructure.
             </p>
-          </div>
+          </ScrollReveal>
 
           <div className="space-y-6">
             {itServices.map((service, idx) => (
-              <div key={idx} className="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200">
+              <ScrollReveal
+                key={idx}
+                as="div"
+                variant="pop"
+                delay={idx * 60}
+                className="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200"
+              >
                 <h3 className="heading-sm mb-3 text-[#1b2e45]">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{service.description}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* Advisory Services */}
-      <section className="py-20 md:py-32 bg-gray-50">
+        {/* Advisory Services */}
+        <section className="py-20 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="mb-12">
+          <ScrollReveal as="div" variant="fade-up" className="mb-12">
             <h2 className="heading-lg mb-4 text-[#1b2e45]">Advisory Services</h2>
             <p className="text-lg text-gray-600 mb-8">
               Strategic consulting to optimize your learning and development initiatives.
             </p>
-          </div>
+          </ScrollReveal>
 
           <div className="space-y-6">
             {advisoryServices.map((service, idx) => (
-              <div key={idx} className="card-hover bg-white p-8 rounded-lg border border-gray-200">
+              <ScrollReveal
+                key={idx}
+                as="div"
+                variant="pop"
+                delay={idx * 60}
+                className="card-hover bg-white p-8 rounded-lg border border-gray-200"
+              >
                 <h3 className="heading-sm mb-3 text-[#1b2e45]">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{service.description}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 md:py-32 bg-[#1b2e45] text-white">
-        <div className="container mx-auto px-4 text-center">
+        {/* CTA Section */}
+        <section className="py-20 md:py-32 bg-[#1b2e45] text-white">
+        <ScrollReveal as="div" variant="pop" className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Let's discuss which services are right for your organization and how we can help you achieve your goals.
@@ -201,8 +227,9 @@ export default function Services() {
               Schedule a Consultation
             </span>
           </Link>
-        </div>
-      </section>
+        </ScrollReveal>
+        </section>
+      </main>
 
       <Footer />
     </div>

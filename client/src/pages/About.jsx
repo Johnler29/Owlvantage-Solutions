@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Lightbulb, Target, Crown, Compass } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 
 /**
  * About Page
@@ -39,24 +40,25 @@ export default function About() {
     <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#25badf]/5 to-[#1b2e45]/5">
+      <main className="animate-in fade-in-20 slide-in-from-bottom-4 duration-500">
+        {/* Hero Section */}
+        <section className="py-20 lg:py-32 bg-gradient-to-br from-[#25badf]/5 to-[#1b2e45]/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
+          <ScrollReveal as="div" variant="pop" className="max-w-3xl">
             <h1 className="heading-xl mb-6">About Owlvantage Solutions</h1>
             <p className="text-xl text-gray-700 leading-relaxed">
               We are a forward-thinking organization dedicated to empowering businesses and professionals through
               innovative learning solutions and cutting-edge technology.
             </p>
-          </div>
+          </ScrollReveal>
         </div>
-      </section>
+        </section>
 
-      {/* Company Overview */}
-      <section className="py-20 lg:py-32 bg-white">
+        {/* Company Overview */}
+        <section className="py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <ScrollReveal as="div" variant="fade-up">
               <h2 className="heading-lg mb-6">Our Story</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 Owlvantage Solutions was founded on the belief that organizations deserve learning and technology
@@ -72,8 +74,8 @@ export default function About() {
                 Today, we partner with leading organizations across industries to design and deliver learning solutions
                 that drive business results and employee engagement.
               </p>
-            </div>
-            <div className="bg-white p-8 rounded-lg border border-gray-200 card-hover">
+            </ScrollReveal>
+            <ScrollReveal as="div" variant="pop" className="bg-white p-8 rounded-lg border border-gray-200 card-hover">
               <div className="grid grid-cols-1 sm:grid-cols-3 sm:divide-x divide-gray-200">
                 <div className="py-4 sm:py-0 px-4 text-center">
                   <div className="text-4xl lg:text-5xl font-bold text-[#25badf] leading-none">500+</div>
@@ -90,17 +92,17 @@ export default function About() {
                   <p className="mt-3 text-gray-700 font-semibold">Years of Excellence</p>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* Mission & Vision */}
-      <section className="py-20 lg:py-32 bg-gray-50">
+        {/* Mission & Vision */}
+        <section className="py-20 lg:py-32 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Mission */}
-            <div className="bg-white p-8 rounded-lg border border-gray-200">
+            <ScrollReveal as="div" variant="pop" className="bg-white p-8 rounded-lg border border-gray-200">
               <h3 className="heading-md mb-4 text-[#1b2e45]">Our Mission</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 To empower organizations and professionals through innovative learning and technology solutions that
@@ -110,10 +112,10 @@ export default function About() {
                 We are committed to delivering programs that are relevant, engaging, and measurably effective in
                 transforming how people work and learn.
               </p>
-            </div>
+            </ScrollReveal>
 
             {/* Vision */}
-            <div className="bg-white p-8 rounded-lg border border-gray-200">
+            <ScrollReveal as="div" variant="pop" delay={80} className="bg-white p-8 rounded-lg border border-gray-200">
               <h3 className="heading-md mb-4 text-[#1b2e45]">Our Vision</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 To become the trusted leader in technology-driven learning and professional development, recognized for
@@ -123,26 +125,32 @@ export default function About() {
                 We envision a world where organizations have access to world-class learning solutions that enable their
                 teams to reach their full potential.
               </p>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* Core Values */}
-      <section className="py-20 lg:py-32 bg-white">
+        {/* Core Values */}
+        <section className="py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <ScrollReveal as="div" variant="fade-up" className="text-center mb-16">
             <h2 className="heading-lg mb-4">Our Core Values</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               These principles guide everything we do and shape how we serve our clients.
             </p>
-          </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {coreValues.map((value, idx) => {
               const Icon = value.icon;
               return (
-                <div key={idx} className="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200">
+                <ScrollReveal
+                  key={idx}
+                  as="div"
+                  variant="pop"
+                  delay={idx * 80}
+                  className="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200"
+                >
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
                       <Icon className="w-10 h-10 text-[#25badf]" />
@@ -152,16 +160,16 @@ export default function About() {
                       <p className="text-gray-600 leading-relaxed">{value.description}</p>
                     </div>
                   </div>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 lg:py-32 bg-[#1b2e45] text-white">
-        <div className="container mx-auto px-4 text-center">
+        {/* CTA Section */}
+        <section className="py-20 lg:py-32 bg-[#1b2e45] text-white">
+        <ScrollReveal as="div" variant="pop" className="container mx-auto px-4 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">Let's Work Together</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Discover how Owlvantage Solutions can help your organization achieve its learning and development goals.
@@ -171,8 +179,9 @@ export default function About() {
               Get in Touch
             </span>
           </Link>
-        </div>
-      </section>
+        </ScrollReveal>
+        </section>
+      </main>
 
       <Footer />
     </div>

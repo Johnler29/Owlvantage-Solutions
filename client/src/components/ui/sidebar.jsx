@@ -29,17 +29,9 @@ const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 const SIDEBAR_WIDTH = "16rem";
 const SIDEBAR_WIDTH_MOBILE = "18rem";
 const SIDEBAR_WIDTH_ICON = "3rem";
-const SIDEBAR_KEYBOARD_SHORTCUT = "b"; = {
-  state: "expanded" | "collapsed";
-  open;
-  setOpen: (open: boolean) => void;
-  openMobile;
-  setOpenMobile: (open: boolean) => void;
-  isMobile;
-  toggleSidebar: () => void;
-};
+const SIDEBAR_KEYBOARD_SHORTCUT = "b";
 
-const SidebarContext = React.createContext<SidebarContextProps | null>(null);
+const SidebarContext = React.createContext(null);
 
 function useSidebar() {
   const context = React.useContext(SidebarContext);
@@ -88,7 +80,7 @@ function SidebarProvider({
 
   // Adds a keyboard shortcut to toggle the sidebar.
   React.useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = event => {
       if (
         event.key === SIDEBAR_KEYBOARD_SHORTCUT &&
         (event.metaKey || event.ctrlKey)
@@ -106,7 +98,7 @@ function SidebarProvider({
   // This makes it easier to style the sidebar with Tailwind classes.
   const state = open ? "expanded" : "collapsed";
 
-  const contextValue = React.useMemo<SidebarContextProps>(
+  const contextValue = React.useMemo(
     () => ({
       state,
       open,

@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -11,6 +11,7 @@ import { useState } from "react";
  */
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [location] = useLocation();
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -19,6 +20,10 @@ export default function Navigation() {
     { href: "/seminars", label: "Seminars" },
     { href: "/contact", label: "Contact" },
   ];
+
+  const normalizePath = (path) => (path.length > 1 ? path.replace(/\/+$/, "") : path);
+  const currentPath = normalizePath(location);
+  const isActive = (href) => normalizePath(href) === currentPath;
 
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
@@ -41,7 +46,13 @@ export default function Navigation() {
         <div className="hidden md:flex items-center gap-4 lg:gap-8">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href}>
-              <span className="text-gray-700 font-medium text-sm lg:text-base whitespace-nowrap hover:text-[#25badf] transition-colors duration-200">
+              <span
+                className={
+                  isActive(link.href)
+                    ? "text-[#25badf] font-semibold text-sm lg:text-base whitespace-nowrap transition-colors duration-200 border-b-2 border-[#25badf] pb-1"
+                    : "text-gray-700 font-medium text-sm lg:text-base whitespace-nowrap hover:text-[#25badf] transition-colors duration-200"
+                }
+              >
                 {link.label}
               </span>
             </Link>
@@ -69,7 +80,11 @@ export default function Navigation() {
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>
                 <span
-                  className="text-gray-700 font-medium hover:text-[#25badf] transition-colors block"
+                  className={
+                    isActive(link.href)
+                      ? "text-[#25badf] font-semibold transition-colors block"
+                      : "text-gray-700 font-medium hover:text-[#25badf] transition-colors block"
+                  }
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
@@ -77,7 +92,10 @@ export default function Navigation() {
               </Link>
             ))}
             <Link href="/contact">
-              <span className="btn-primary block text-center" onClick={() => setIsOpen(false)}>
+              <span
+                className="btn-primary block text-center"
+                onClick={() => setIsOpen(false)}
+              >
                 Get Started
               </span>
             </Link>
