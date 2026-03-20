@@ -31,9 +31,11 @@ export default function Navigation() {
         {/* Logo */}
         <Link href="/">
           <div className="flex items-center gap-2 cursor-pointer">
-            <div className="w-10 h-10 bg-[#25badf] rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">O</span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Owlvantage - See Smarter"
+              className="w-14 h-14 sm:w-16 sm:h-16 object-contain"
+            />
             {/* Hide full logo text on tablets to prevent nav overflow */}
             <div className="hidden lg:block">
               <h1 className="text-xl font-bold text-[#1b2e45]">Owlvantage</h1>
