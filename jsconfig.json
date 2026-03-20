@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./client/src/*"],
+      "@shared/*": ["./shared/*"]
+    },
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "checkJs": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node"
+  },
+  "include": ["client/src/**/*"],
+  "exclude": ["node_modules", "dist", "build"]
+}
