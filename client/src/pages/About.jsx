@@ -40,7 +40,7 @@ export default function About() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-[#25badf]/5 to-[#1b2e45]/5">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#25badf]/5 to-[#1b2e45]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="heading-xl mb-6">About Owlvantage Solutions</h1>
@@ -53,9 +53,9 @@ export default function About() {
       </section>
 
       {/* Company Overview */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="heading-lg mb-6">Our Story</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
@@ -94,9 +94,9 @@ export default function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 md:py-32 bg-gray-50">
+      <section className="py-20 lg:py-32 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Mission */}
             <div className="bg-white p-8 rounded-lg border border-gray-200">
               <h3 className="heading-md mb-4 text-[#1b2e45]">Our Mission</h3>
@@ -127,7 +127,7 @@ export default function About() {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">Our Core Values</h2>
@@ -136,7 +136,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {coreValues.map((value, idx) => {
               const Icon = value.icon;
               return (
@@ -158,9 +158,9 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-32 bg-[#1b2e45] text-white">
+      <section className="py-20 lg:py-32 bg-[#1b2e45] text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's Work Together</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">Let's Work Together</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Discover how Owlvantage Solutions can help your organization achieve its learning and development goals.
           </p>

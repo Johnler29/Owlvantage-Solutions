@@ -63,7 +63,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section
-        className="relative py-20 md:py-32 bg-cover bg-center"
+        className="relative py-20 lg:py-32 bg-cover bg-center"
         style={{
           backgroundImage:
             "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663423259711/4MdUcbSqby5GLfYivgSoHu/hero-background-LYEmnoHrvHVcJWDCjgvCAY.webp')",
@@ -71,7 +71,7 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-white/70"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="heading-xl mb-4">Empowering Learning Through Technology</h1>
               <p className="text-xl text-gray-700 mb-2 font-semibold text-[#25badf]">See Smarter</p>
@@ -97,7 +97,7 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 md:py-32 bg-gray-50">
+      <section className="py-20 lg:py-32 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">Our Services</h2>
@@ -106,7 +106,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {services.map((service, idx) => (
               <div key={idx} className="card-hover bg-white p-8 rounded-lg border border-gray-200">
                 <img src={service.icon} alt={service.title} className="w-20 h-20 mb-6" />
@@ -119,9 +119,9 @@ export default function Home() {
       </section>
 
       {/* Why Choose Owlvantage */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="heading-lg mb-8">Why Choose Owlvantage</h2>
               <div className="space-y-6">
@@ -157,7 +157,7 @@ export default function Home() {
       </section>
 
       {/* Featured Seminars */}
-      <section className="py-20 md:py-32 bg-gray-50">
+      <section className="py-20 lg:py-32 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">Featured Programs</h2>
@@ -166,7 +166,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             {seminars.map((seminar, idx) => (
               <div key={idx} className="card-hover bg-white p-8 rounded-lg border border-gray-200">
                 <h3 className="heading-sm mb-3 text-[#1b2e45]">{seminar.title}</h3>
@@ -189,9 +189,9 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-32 bg-[#1b2e45] text-white">
+      <section className="py-20 lg:py-32 bg-[#1b2e45] text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Organization?</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">Ready to Transform Your Organization?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Let's discuss how Owlvantage Solutions can help your team achieve its goals through innovative learning and
             technology solutions.

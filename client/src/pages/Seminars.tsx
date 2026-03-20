@@ -72,7 +72,7 @@ export default function Seminars() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-[#25badf]/5 to-[#1b2e45]/5">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#25badf]/5 to-[#1b2e45]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="heading-xl mb-6">Seminars & Workshops</h1>
@@ -85,7 +85,7 @@ export default function Seminars() {
       </section>
 
       {/* Featured Programs */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">Featured Programs</h2>
@@ -94,7 +94,7 @@ export default function Seminars() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredPrograms.map((program, idx) => (
               <div key={idx} className="card-hover bg-gray-50 p-8 rounded-lg border border-gray-200">
                 <div className="flex items-start justify-between mb-4">
@@ -116,7 +116,7 @@ export default function Seminars() {
       </section>
 
       {/* Upcoming Seminars */}
-      <section className="py-20 md:py-32 bg-gray-50">
+      <section className="py-20 lg:py-32 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">Upcoming Seminars</h2>
@@ -128,12 +128,12 @@ export default function Seminars() {
           <div className="space-y-6">
             {upcomingSeminars.map((seminar, idx) => (
               <div key={idx} className="card-hover bg-white p-8 rounded-lg border border-gray-200">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
                   <div>
                     <div className="text-[#25badf] font-bold text-lg">{seminar.date}</div>
                     <p className="text-gray-600 text-sm">{seminar.time}</p>
                   </div>
-                  <div className="md:col-span-2">
+                  <div className="lg:col-span-2">
                     <h3 className="heading-sm text-[#1b2e45] mb-2">{seminar.title}</h3>
                     <p className="text-gray-600 flex items-center gap-2">
                       <Calendar size={16} />
@@ -153,7 +153,7 @@ export default function Seminars() {
       </section>
 
       {/* Benefits */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">Benefits of Attending</h2>
@@ -162,7 +162,7 @@ export default function Seminars() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {benefits.map((benefit, idx) => {
               const Icon = benefit.icon;
               return (
@@ -179,9 +179,9 @@ export default function Seminars() {
       </section>
 
       {/* Promotional Banner */}
-      <section className="py-20 md:py-32 bg-[#1b2e45] text-white">
+      <section className="py-20 lg:py-32 bg-[#1b2e45] text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Enhance Your Skills?</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">Ready to Enhance Your Skills?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join hundreds of professionals who have transformed their careers through our seminars and workshops.
           </p>

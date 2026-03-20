@@ -37,7 +37,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href}>
               <span className="text-gray-700 font-medium hover:text-[#25badf] transition-colors duration-200">
@@ -53,7 +53,7 @@ export default function Navigation() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-gray-700 hover:text-[#25badf] transition-colors"
+          className="lg:hidden p-2 text-gray-700 hover:text-[#25badf] transition-colors"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -61,7 +61,7 @@ export default function Navigation() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 py-4">
+        <div className="lg:hidden bg-white border-t border-gray-200 py-4">
           <div className="container mx-auto px-4 flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>

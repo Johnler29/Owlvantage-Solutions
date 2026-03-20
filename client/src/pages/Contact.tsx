@@ -65,7 +65,7 @@ export default function Contact() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-[#25badf]/5 to-[#1b2e45]/5">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#25badf]/5 to-[#1b2e45]/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="heading-xl mb-6">Get in Touch</h1>
@@ -77,7 +77,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Information */}
@@ -156,7 +156,7 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   {/* Name */}
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-[#1b2e45] mb-2">
@@ -192,7 +192,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   {/* Phone */}
                   <div>
                     <label htmlFor="phone" className="block text-sm font-semibold text-[#1b2e45] mb-2">
@@ -262,9 +262,9 @@ export default function Contact() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-32 bg-gray-50">
+      <section className="py-20 lg:py-32 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1b2e45] mb-6">Prefer to Call?</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold text-[#1b2e45] mb-6">Prefer to Call?</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Our team is ready to discuss your learning and development needs. Reach out via email or contact form above.
           </p>

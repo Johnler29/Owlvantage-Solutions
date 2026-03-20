@@ -198,19 +198,19 @@
   }
 
   .heading-xl {
-    @apply text-5xl md:text-6xl font-bold text-[#1b2e45] leading-tight;
+    @apply text-5xl lg:text-6xl font-bold text-[#1b2e45] leading-tight;
   }
 
   .heading-lg {
-    @apply text-4xl md:text-5xl font-bold text-[#1b2e45] leading-tight;
+    @apply text-4xl lg:text-5xl font-bold text-[#1b2e45] leading-tight;
   }
 
   .heading-md {
-    @apply text-3xl md:text-4xl font-bold text-[#1b2e45];
+    @apply text-3xl lg:text-4xl font-bold text-[#1b2e45];
   }
 
   .heading-sm {
-    @apply text-2xl md:text-3xl font-bold text-[#1b2e45];
+    @apply text-2xl lg:text-3xl font-bold text-[#1b2e45];
   }
 
   .text-accent {
