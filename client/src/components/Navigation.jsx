@@ -29,7 +29,8 @@ export default function Navigation() {
             <div className="w-10 h-10 bg-[#25badf] rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-lg">O</span>
             </div>
-            <div className="hidden sm:block">
+            {/* Hide full logo text on tablets to prevent nav overflow */}
+            <div className="hidden lg:block">
               <h1 className="text-xl font-bold text-[#1b2e45]">Owlvantage</h1>
               <p className="text-xs text-[#25badf] font-semibold">See Smarter</p>
             </div>
@@ -37,16 +38,18 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-4 lg:gap-8">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href}>
-              <span className="text-gray-700 font-medium hover:text-[#25badf] transition-colors duration-200">
+              <span className="text-gray-700 font-medium text-sm lg:text-base whitespace-nowrap hover:text-[#25badf] transition-colors duration-200">
                 {link.label}
               </span>
             </Link>
           ))}
           <Link href="/contact">
-            <span className="btn-primary inline-block">Get Started</span>
+            <span className="btn-primary inline-block px-4 py-2 text-sm md:text-sm lg:text-base whitespace-nowrap lg:px-6 lg:py-3">
+              Get Started
+            </span>
           </Link>
         </div>
 

@@ -81,12 +81,12 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/seminars">
-                  <span className="btn-primary inline-flex items-center justify-center gap-2">
+                  <span className="btn-primary inline-flex w-full sm:w-auto items-center justify-center gap-2">
                     Book a Seminar <ArrowRight size={18} />
                   </span>
                 </Link>
                 <Link href="/contact">
-                  <span className="btn-outline inline-flex items-center justify-center gap-2">
+                  <span className="btn-outline inline-flex w-full sm:w-auto items-center justify-center gap-2">
                     Request Consultation <ArrowRight size={18} />
                   </span>
                 </Link>
@@ -138,18 +138,23 @@ export default function Home() {
                 })}
               </div>
             </div>
-            <div className="bg-gradient-to-br from-[#25badf]/10 to-[#1b2e45]/10 p-12 rounded-lg border border-[#25badf]/20">
-              <div className="text-center">
-                <div className="text-6xl font-bold text-[#25badf] mb-4">15+</div>
-                <p className="text-xl text-gray-700 font-semibold mb-8">Years of Industry Experience</p>
-                <p className="text-gray-600 mb-8">
-                  Trusted by leading organizations to deliver transformative learning and technology solutions.
-                </p>
-                <Link href="/about">
-                  <span className="text-[#25badf] font-semibold hover:underline inline-flex items-center gap-2">
-                    Learn More <ArrowRight size={18} />
-                  </span>
-                </Link>
+            <div className="bg-white p-8 rounded-lg border border-gray-200 card-hover">
+              <div className="flex flex-col lg:flex-row lg:items-center gap-8">
+                <div className="text-center lg:text-left">
+                  <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#25badf] leading-none">15+</div>
+                  <p className="mt-3 text-gray-700 font-semibold">Years of Industry Experience</p>
+                </div>
+
+                <div className="lg:flex-1 text-center lg:text-left">
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    Trusted by leading organizations to deliver transformative learning and technology solutions.
+                  </p>
+                  <Link href="/about">
+                    <span className="text-[#25badf] font-semibold hover:underline inline-flex items-center gap-2">
+                      Learn More <ArrowRight size={18} />
+                    </span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

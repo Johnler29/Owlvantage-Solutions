@@ -73,19 +73,21 @@ export default function About() {
                 that drive business results and employee engagement.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-[#25badf]/10 to-[#1b2e45]/10 p-12 rounded-lg border border-[#25badf]/20">
-              <div className="space-y-8">
-                <div>
-                  <div className="text-4xl font-bold text-[#25badf] mb-2">500+</div>
-                  <p className="text-gray-700 font-semibold">Organizations Served</p>
+            <div className="bg-white p-8 rounded-lg border border-gray-200 card-hover">
+              <div className="grid grid-cols-1 sm:grid-cols-3 sm:divide-x divide-gray-200">
+                <div className="py-4 sm:py-0 px-4 text-center">
+                  <div className="text-4xl lg:text-5xl font-bold text-[#25badf] leading-none">500+</div>
+                  <p className="mt-3 text-gray-700 font-semibold">Organizations Served</p>
                 </div>
-                <div>
-                  <div className="text-4xl font-bold text-[#25badf] mb-2">50K+</div>
-                  <p className="text-gray-700 font-semibold">Professionals Trained</p>
+
+                <div className="py-4 sm:py-0 px-4 text-center">
+                  <div className="text-4xl lg:text-5xl font-bold text-[#25badf] leading-none">50K+</div>
+                  <p className="mt-3 text-gray-700 font-semibold">Professionals Trained</p>
                 </div>
-                <div>
-                  <div className="text-4xl font-bold text-[#25badf] mb-2">15+</div>
-                  <p className="text-gray-700 font-semibold">Years of Excellence</p>
+
+                <div className="py-4 sm:py-0 px-4 text-center">
+                  <div className="text-4xl lg:text-5xl font-bold text-[#25badf] leading-none">15+</div>
+                  <p className="mt-3 text-gray-700 font-semibold">Years of Excellence</p>
                 </div>
               </div>
             </div>
