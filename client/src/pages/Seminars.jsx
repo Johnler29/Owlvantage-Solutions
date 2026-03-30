@@ -3,6 +3,8 @@ import { Calendar, Users, Award, Network } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
+import analytics from "@/lib/analytics";
 
 /**
  * Seminars Page
@@ -195,6 +197,24 @@ export default function Seminars() {
               );
             })}
           </div>
+        </div>
+        </section>
+
+        {/* Lead Capture Section */}
+        <section className="py-20 md:py-32 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="container mx-auto px-4">
+          <ScrollReveal as="div" variant="fade-up" className="text-center mb-12">
+            <h2 className="heading-lg mb-4">Interested in Our Seminars?</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Fill out the form below to inquire about our training programs and seminars.
+            </p>
+          </ScrollReveal>
+          <LeadCaptureForm onSuccess={(data) => {
+            analytics.trackLeadCapture({
+              source: 'seminars_page',
+              interestArea: data.interestArea,
+            });
+          }} />
         </div>
         </section>
 

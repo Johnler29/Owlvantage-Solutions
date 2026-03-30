@@ -1,8 +1,10 @@
 import { Link } from "wouter";
 import { ArrowRight, BookOpen, Zap, Users } from "lucide-react";
+import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import analytics from "@/lib/analytics";
 
 /**
  * Home Page
@@ -14,6 +16,9 @@ import ScrollReveal from "@/components/ScrollReveal";
  * - Professional, clean layout with teal accents
  */
 export default function Home() {
+  useEffect(() => {
+    analytics.trackButtonClick('home_page_loaded', { timestamp: new Date().toISOString() });
+  }, []);
   const services = [
     {
       icon: "https://d2xsxph8kpxj0f.cloudfront.net/310519663423259711/4MdUcbSqby5GLfYivgSoHu/services-icon-learning-2xMeMbGDWAgyd4RsYfkHi3.webp",
@@ -82,12 +87,18 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/seminars">
-                  <span className="btn-primary inline-flex w-full sm:w-auto items-center justify-center gap-2">
+                  <span 
+                    className="btn-primary inline-flex w-full sm:w-auto items-center justify-center gap-2"
+                    onClick={() => analytics.trackButtonClick('book_seminar_home')}
+                  >
                     Book a Seminar <ArrowRight size={18} />
                   </span>
                 </Link>
                 <Link href="/contact">
-                  <span className="btn-outline inline-flex w-full sm:w-auto items-center justify-center gap-2">
+                  <span 
+                    className="btn-outline inline-flex w-full sm:w-auto items-center justify-center gap-2"
+                    onClick={() => analytics.trackButtonClick('request_consultation_home')}
+                  >
                     Request Consultation <ArrowRight size={18} />
                   </span>
                 </Link>
